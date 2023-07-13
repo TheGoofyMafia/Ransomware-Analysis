@@ -1,0 +1,1106 @@
+{
+    "info": {
+        "added": 1689158997.273676, 
+        "started": 1689158997.716086, 
+        "duration": 17, 
+        "ended": 1689159014.838699, 
+        "owner": null, 
+        "score": 0.4, 
+        "id": 29, 
+        "category": "file", 
+        "git": {
+            "head": "13cbe0d9e457be3673304533043e992ead1ea9b2", 
+            "fetch_head": "13cbe0d9e457be3673304533043e992ead1ea9b2"
+        }, 
+        "monitor": "2deb9ccd75d5a7a3fe05b2625b03a8639d6ee36b", 
+        "package": "exe", 
+        "route": "none", 
+        "custom": null, 
+        "machine": {
+            "status": "stopped", 
+            "name": "cuckoo1", 
+            "label": "cuckoo1", 
+            "manager": "VirtualBox", 
+            "started_on": "2023-07-12 10:49:57", 
+            "shutdown_on": "2023-07-12 10:50:14"
+        }, 
+        "platform": "windows", 
+        "version": "2.0.7", 
+        "options": "procmemdump=yes,route=none"
+    }, 
+    "signatures": [
+        {
+            "families": [], 
+            "description": "The binary likely contains encrypted or compressed data indicative of a packer", 
+            "severity": 2, 
+            "ttp": {
+                "T1045": {
+                    "short": "Software Packing", 
+                    "long": "Software packing is a method of compressing or encrypting an executable. Packing an executable changes the file signature in an attempt to avoid signature-based detection. Most decompression techniques decompress the executable code in memory."
+                }
+            }, 
+            "markcount": 3, 
+            "references": [
+                "http://www.forensickb.com/2013/03/file-entropy-explained.html", 
+                "http://virii.es/U/Using%20Entropy%20Analysis%20to%20Find%20Encrypted%20and%20Packed%20Malware.pdf"
+            ], 
+            "marks": [
+                {
+                    "entropy": 7.220589911785075, 
+                    "section": {
+                        "size_of_data": "0x00004600", 
+                        "virtual_address": "0x0000d000", 
+                        "entropy": 7.220589911785075, 
+                        "name": ".rdata", 
+                        "virtual_size": "0x0000449c"
+                    }, 
+                    "type": "generic", 
+                    "description": "A section with a high entropy has been found"
+                }, 
+                {
+                    "entropy": 7.160002517132386, 
+                    "section": {
+                        "size_of_data": "0x0002f600", 
+                        "virtual_address": "0x00018000", 
+                        "entropy": 7.160002517132386, 
+                        "name": ".rsrc", 
+                        "virtual_size": "0x0002f578"
+                    }, 
+                    "type": "generic", 
+                    "description": "A section with a high entropy has been found"
+                }, 
+                {
+                    "entropy": 0.7961538461538461, 
+                    "type": "generic", 
+                    "description": "Overall entropy of this PE file is high"
+                }
+            ], 
+            "name": "packer_entropy"
+        }
+    ], 
+    "target": {
+        "category": "file", 
+        "file": {
+            "yara": [], 
+            "sha1": "e906fa3d51e86a61741b3499145a114e9bfb7c56", 
+            "name": "E906FA3D51E86A61741B3499145A114E9BFB7C56", 
+            "type": "PE32 executable (GUI) Intel 80386 (stripped to external PDB), for MS Windows", 
+            "sha256": "afaba2400552c7032a5c4c6e6151df374d0e98dc67204066281e30e6699dbd18", 
+            "urls": [], 
+            "crc32": "85F212E0", 
+            "path": "/root/.cuckoo/storage/binaries/afaba2400552c7032a5c4c6e6151df374d0e98dc67204066281e30e6699dbd18", 
+            "ssdeep": null, 
+            "size": 267278, 
+            "sha512": "973643639cb02491b86d5b264ee8118a67d8a83453307aea95de2f4c6aa55819d37730c41dc3338116ebe86f9a4f2bba7d9537ea744ae08b9755f05c15153fad", 
+            "md5": "6d3d62a4cff19b4f2cc7ce9027c33be8"
+        }
+    }, 
+    "network": {
+        "tls": [], 
+        "udp": [
+            {
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "offset": 1010, 
+                "time": 6.649033069610596, 
+                "dport": 137, 
+                "sport": 137
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 11854, 
+                "time": 4.52649998664856, 
+                "dport": 5355, 
+                "sport": 50570
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 12198, 
+                "time": 2.987830877304077, 
+                "dport": 5355, 
+                "sport": 51920
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 12542, 
+                "time": 6.521595001220703, 
+                "dport": 5355, 
+                "sport": 52733
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 12886, 
+                "time": 9.553586959838867, 
+                "dport": 5355, 
+                "sport": 54248
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 13214, 
+                "time": 11.896576881408691, 
+                "dport": 5355, 
+                "sport": 54803
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 13558, 
+                "time": 6.864552974700928, 
+                "dport": 5355, 
+                "sport": 56765
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 13886, 
+                "time": 12.198739051818848, 
+                "dport": 5355, 
+                "sport": 57902
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 14214, 
+                "time": 8.559907913208008, 
+                "dport": 5355, 
+                "sport": 58201
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 14558, 
+                "time": 3.236006021499634, 
+                "dport": 5355, 
+                "sport": 64969
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "offset": 14886, 
+                "time": 4.790996074676514, 
+                "dport": 3702, 
+                "sport": 49152
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "255.255.255.255", 
+                "offset": 23262, 
+                "time": 7.892932891845703, 
+                "dport": 67, 
+                "sport": 68
+            }
+        ], 
+        "dns_servers": [], 
+        "http": [], 
+        "icmp": [], 
+        "smtp": [], 
+        "tcp": [], 
+        "smtp_ex": [], 
+        "mitm": [], 
+        "hosts": [], 
+        "pcap_sha256": "b234a2cf510f041d0e159053071d70dc2079915de72c80bdf397220df1ad465e", 
+        "dns": [], 
+        "http_ex": [], 
+        "domains": [], 
+        "dead_hosts": [], 
+        "sorted_pcap_sha256": "ffac2743adf5d7ef403054f6602e322b7d361a1647ba51f977f7c53c04bac135", 
+        "irc": [], 
+        "https_ex": []
+    }, 
+    "static": {
+        "pdb_path": null, 
+        "pe_imports": [
+            {
+                "imports": [
+                    {
+                        "name": "DeleteObject", 
+                        "address": "0x4151e4"
+                    }, 
+                    {
+                        "name": "GetStockObject", 
+                        "address": "0x4151e8"
+                    }
+                ], 
+                "dll": "GDI32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "CreateProcessW", 
+                        "address": "0x4151f0"
+                    }, 
+                    {
+                        "name": "DeleteCriticalSection", 
+                        "address": "0x4151f4"
+                    }, 
+                    {
+                        "name": "EnterCriticalSection", 
+                        "address": "0x4151f8"
+                    }, 
+                    {
+                        "name": "ExitProcess", 
+                        "address": "0x4151fc"
+                    }, 
+                    {
+                        "name": "FindClose", 
+                        "address": "0x415200"
+                    }, 
+                    {
+                        "name": "FindFirstFileA", 
+                        "address": "0x415204"
+                    }, 
+                    {
+                        "name": "FindNextFileA", 
+                        "address": "0x415208"
+                    }, 
+                    {
+                        "name": "FindResourceW", 
+                        "address": "0x41520c"
+                    }, 
+                    {
+                        "name": "GetCommandLineA", 
+                        "address": "0x415210"
+                    }, 
+                    {
+                        "name": "GetLastError", 
+                        "address": "0x415214"
+                    }, 
+                    {
+                        "name": "GetModuleFileNameW", 
+                        "address": "0x415218"
+                    }, 
+                    {
+                        "name": "GetModuleHandleA", 
+                        "address": "0x41521c"
+                    }, 
+                    {
+                        "name": "GetProcAddress", 
+                        "address": "0x415220"
+                    }, 
+                    {
+                        "name": "GetStartupInfoA", 
+                        "address": "0x415224"
+                    }, 
+                    {
+                        "name": "InitializeCriticalSection", 
+                        "address": "0x415228"
+                    }, 
+                    {
+                        "name": "InterlockedExchange", 
+                        "address": "0x41522c"
+                    }, 
+                    {
+                        "name": "IsDBCSLeadByteEx", 
+                        "address": "0x415230"
+                    }, 
+                    {
+                        "name": "LeaveCriticalSection", 
+                        "address": "0x415234"
+                    }, 
+                    {
+                        "name": "LoadLibraryA", 
+                        "address": "0x415238"
+                    }, 
+                    {
+                        "name": "LoadResource", 
+                        "address": "0x41523c"
+                    }, 
+                    {
+                        "name": "MultiByteToWideChar", 
+                        "address": "0x415240"
+                    }, 
+                    {
+                        "name": "SetUnhandledExceptionFilter", 
+                        "address": "0x415244"
+                    }, 
+                    {
+                        "name": "Sleep", 
+                        "address": "0x415248"
+                    }, 
+                    {
+                        "name": "TlsGetValue", 
+                        "address": "0x41524c"
+                    }, 
+                    {
+                        "name": "VirtualProtect", 
+                        "address": "0x415250"
+                    }, 
+                    {
+                        "name": "VirtualQuery", 
+                        "address": "0x415254"
+                    }, 
+                    {
+                        "name": "WideCharToMultiByte", 
+                        "address": "0x415258"
+                    }
+                ], 
+                "dll": "KERNEL32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "_strdup", 
+                        "address": "0x415260"
+                    }, 
+                    {
+                        "name": "_stricoll", 
+                        "address": "0x415264"
+                    }
+                ], 
+                "dll": "msvcrt.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "__getmainargs", 
+                        "address": "0x41526c"
+                    }, 
+                    {
+                        "name": "__mb_cur_max", 
+                        "address": "0x415270"
+                    }, 
+                    {
+                        "name": "__p__environ", 
+                        "address": "0x415274"
+                    }, 
+                    {
+                        "name": "__p__fmode", 
+                        "address": "0x415278"
+                    }, 
+                    {
+                        "name": "__set_app_type", 
+                        "address": "0x41527c"
+                    }, 
+                    {
+                        "name": "_cexit", 
+                        "address": "0x415280"
+                    }, 
+                    {
+                        "name": "_errno", 
+                        "address": "0x415284"
+                    }, 
+                    {
+                        "name": "_fullpath", 
+                        "address": "0x415288"
+                    }, 
+                    {
+                        "name": "_iob", 
+                        "address": "0x41528c"
+                    }, 
+                    {
+                        "name": "_onexit", 
+                        "address": "0x415290"
+                    }, 
+                    {
+                        "name": "_setmode", 
+                        "address": "0x415294"
+                    }, 
+                    {
+                        "name": "abort", 
+                        "address": "0x415298"
+                    }, 
+                    {
+                        "name": "atexit", 
+                        "address": "0x41529c"
+                    }, 
+                    {
+                        "name": "atoi", 
+                        "address": "0x4152a0"
+                    }, 
+                    {
+                        "name": "calloc", 
+                        "address": "0x4152a4"
+                    }, 
+                    {
+                        "name": "exit", 
+                        "address": "0x4152a8"
+                    }, 
+                    {
+                        "name": "fputc", 
+                        "address": "0x4152ac"
+                    }, 
+                    {
+                        "name": "free", 
+                        "address": "0x4152b0"
+                    }, 
+                    {
+                        "name": "fwrite", 
+                        "address": "0x4152b4"
+                    }, 
+                    {
+                        "name": "getenv", 
+                        "address": "0x4152b8"
+                    }, 
+                    {
+                        "name": "isspace", 
+                        "address": "0x4152bc"
+                    }, 
+                    {
+                        "name": "localeconv", 
+                        "address": "0x4152c0"
+                    }, 
+                    {
+                        "name": "malloc", 
+                        "address": "0x4152c4"
+                    }, 
+                    {
+                        "name": "mbstowcs", 
+                        "address": "0x4152c8"
+                    }, 
+                    {
+                        "name": "memcpy", 
+                        "address": "0x4152cc"
+                    }, 
+                    {
+                        "name": "realloc", 
+                        "address": "0x4152d0"
+                    }, 
+                    {
+                        "name": "setlocale", 
+                        "address": "0x4152d4"
+                    }, 
+                    {
+                        "name": "signal", 
+                        "address": "0x4152d8"
+                    }, 
+                    {
+                        "name": "sprintf", 
+                        "address": "0x4152dc"
+                    }, 
+                    {
+                        "name": "strchr", 
+                        "address": "0x4152e0"
+                    }, 
+                    {
+                        "name": "strcoll", 
+                        "address": "0x4152e4"
+                    }, 
+                    {
+                        "name": "strlen", 
+                        "address": "0x4152e8"
+                    }, 
+                    {
+                        "name": "tolower", 
+                        "address": "0x4152ec"
+                    }, 
+                    {
+                        "name": "vfprintf", 
+                        "address": "0x4152f0"
+                    }, 
+                    {
+                        "name": "wcslen", 
+                        "address": "0x4152f4"
+                    }, 
+                    {
+                        "name": "wcstombs", 
+                        "address": "0x4152f8"
+                    }
+                ], 
+                "dll": "msvcrt.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "CoInitializeEx", 
+                        "address": "0x415300"
+                    }
+                ], 
+                "dll": "OLE32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "SHGetFolderPathA", 
+                        "address": "0x415308"
+                    }
+                ], 
+                "dll": "SHELL32.DLL"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "DispatchMessageA", 
+                        "address": "0x415310"
+                    }, 
+                    {
+                        "name": "GetMessageA", 
+                        "address": "0x415314"
+                    }, 
+                    {
+                        "name": "ShowWindow", 
+                        "address": "0x415318"
+                    }, 
+                    {
+                        "name": "TranslateMessage", 
+                        "address": "0x41531c"
+                    }, 
+                    {
+                        "name": "UpdateWindow", 
+                        "address": "0x415320"
+                    }
+                ], 
+                "dll": "USER32.dll"
+            }
+        ], 
+        "peid_signatures": null, 
+        "keys": [], 
+        "signature": [], 
+        "pe_timestamp": "1969-12-31 19:00:00", 
+        "pe_exports": [], 
+        "imported_dll_count": 7, 
+        "pe_imphash": "99bff35f43bcff8998b2001d6df68577", 
+        "pe_resources": [
+            {
+                "name": "RT_ICON", 
+                "language": "LANG_ENGLISH", 
+                "filetype": "MS Windows icon resource - 6 icons, 96x96, 32 bits/pixel, 72x72, 32 bits/pixel", 
+                "sublanguage": "SUBLANG_ENGLISH_US", 
+                "offset": "0x000180ac", 
+                "size": "0x0002f320"
+            }, 
+            {
+                "name": "RT_MANIFEST", 
+                "language": "LANG_ENGLISH", 
+                "filetype": "XML 1.0 document, ASCII text, with CRLF line terminators", 
+                "sublanguage": "SUBLANG_ENGLISH_US", 
+                "offset": "0x000473cc", 
+                "size": "0x000001ab"
+            }
+        ], 
+        "pe_versioninfo": [], 
+        "pe_sections": [
+            {
+                "size_of_data": "0x0000a800", 
+                "virtual_address": "0x00001000", 
+                "entropy": 6.322590503083691, 
+                "name": ".text", 
+                "virtual_size": "0x0000a768"
+            }, 
+            {
+                "size_of_data": "0x00000200", 
+                "virtual_address": "0x0000c000", 
+                "entropy": 0.4090581433873117, 
+                "name": ".data", 
+                "virtual_size": "0x00000030"
+            }, 
+            {
+                "size_of_data": "0x00004600", 
+                "virtual_address": "0x0000d000", 
+                "entropy": 7.220589911785075, 
+                "name": ".rdata", 
+                "virtual_size": "0x0000449c"
+            }, 
+            {
+                "size_of_data": "0x00001c00", 
+                "virtual_address": "0x00012000", 
+                "entropy": 4.735351038870136, 
+                "name": "/4", 
+                "virtual_size": "0x00001a50"
+            }, 
+            {
+                "size_of_data": "0x00000000", 
+                "virtual_address": "0x00014000", 
+                "entropy": 0.0, 
+                "name": ".bss", 
+                "virtual_size": "0x00000ab0"
+            }, 
+            {
+                "size_of_data": "0x00000a00", 
+                "virtual_address": "0x00015000", 
+                "entropy": 4.739755617851432, 
+                "name": ".idata", 
+                "virtual_size": "0x000008e4"
+            }, 
+            {
+                "size_of_data": "0x00000200", 
+                "virtual_address": "0x00016000", 
+                "entropy": 0.11446338125913882, 
+                "name": ".CRT", 
+                "virtual_size": "0x00000018"
+            }, 
+            {
+                "size_of_data": "0x00000200", 
+                "virtual_address": "0x00017000", 
+                "entropy": 0.22482003450968063, 
+                "name": ".tls", 
+                "virtual_size": "0x00000020"
+            }, 
+            {
+                "size_of_data": "0x0002f600", 
+                "virtual_address": "0x00018000", 
+                "entropy": 7.160002517132386, 
+                "name": ".rsrc", 
+                "virtual_size": "0x0002f578"
+            }
+        ]
+    }, 
+    "debug": {
+        "action": [], 
+        "dbgview": [], 
+        "errors": [], 
+        "log": [
+            "2023-07-12 10:49:57,121 [analyzer] DEBUG: Starting analyzer from: C:\\tmpk2igrl\n", 
+            "2023-07-12 10:49:57,167 [analyzer] DEBUG: Pipe server name: \\??\\PIPE\\uZVAOQqGqpKDgkprryYlH\n", 
+            "2023-07-12 10:49:57,167 [analyzer] DEBUG: Log pipe server name: \\??\\PIPE\\JACKbXDOAqyrLDFUFY\n", 
+            "2023-07-12 10:49:57,459 [analyzer] DEBUG: Started auxiliary module DbgView\n", 
+            "2023-07-12 10:49:58,301 [analyzer] DEBUG: Started auxiliary module Disguise\n", 
+            "2023-07-12 10:50:00,170 [analyzer] DEBUG: Started auxiliary module DumpTLSMasterSecrets\n", 
+            "2023-07-12 10:50:00,306 [analyzer] DEBUG: Started auxiliary module Human\n", 
+            "2023-07-12 10:50:00,306 [analyzer] DEBUG: Started auxiliary module InstallCertificate\n", 
+            "2023-07-12 10:50:00,306 [analyzer] DEBUG: Started auxiliary module Reboot\n", 
+            "2023-07-12 10:50:00,352 [analyzer] DEBUG: Started auxiliary module RecentFiles\n", 
+            "2023-07-12 10:50:00,398 [modules.auxiliary.screenshots] INFO: Python Image Library (either PIL or Pillow) is not installed, screenshots are disabled.\n", 
+            "2023-07-12 10:50:00,398 [analyzer] DEBUG: Started auxiliary module Screenshots\n", 
+            "2023-07-12 10:50:00,398 [analyzer] DEBUG: Started auxiliary module LoadZer0m0n\n"
+        ], 
+        "cuckoo": [
+            "2023-07-12 10:49:57,747 [cuckoo.core.scheduler] INFO: Task #29: acquired machine cuckoo1 (label=cuckoo1)\n", 
+            "2023-07-12 10:49:57,747 [cuckoo.core.resultserver] DEBUG: Now tracking machine 192.168.56.101 for task #29\n", 
+            "2023-07-12 10:49:57,747 [cuckoo.core.plugins] DEBUG: Started auxiliary module: Replay\n", 
+            "2023-07-12 10:49:57,751 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 12454 (interface=vboxnet0, host=192.168.56.101)\n", 
+            "2023-07-12 10:49:57,751 [cuckoo.core.plugins] DEBUG: Started auxiliary module: Sniffer\n", 
+            "2023-07-12 10:49:57,767 [cuckoo.machinery.virtualbox] DEBUG: Starting vm cuckoo1\n", 
+            "2023-07-12 10:49:57,822 [cuckoo.machinery.virtualbox] DEBUG: Restoring virtual machine cuckoo1 to its current snapshot\n", 
+            "2023-07-12 10:49:59,181 [cuckoo.core.guest] INFO: Starting analysis #29 on guest (id=cuckoo1, ip=192.168.56.101)\n", 
+            "2023-07-12 10:50:00,184 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet\n", 
+            "2023-07-12 10:50:01,186 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet\n", 
+            "2023-07-12 10:50:02,192 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet\n", 
+            "2023-07-12 10:50:02,253 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet\n", 
+            "2023-07-12 10:50:03,270 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.101)\n", 
+            "2023-07-12 10:50:03,282 [cuckoo.core.guest] DEBUG: Uploading analyzer to guest (id=cuckoo1, ip=192.168.56.101, monitor=latest, size=3884763)\n", 
+            "2023-07-12 10:50:03,534 [cuckoo.core.resultserver] DEBUG: Task #29: live log analysis.log initialized.\n", 
+            "2023-07-12 10:50:09,552 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #29 still processing\n", 
+            "2023-07-12 10:50:13,633 [cuckoo.core.guest] INFO: cuckoo1: analysis completed successfully\n", 
+            "2023-07-12 10:50:13,637 [cuckoo.core.plugins] DEBUG: Stopped auxiliary module: Replay\n", 
+            "2023-07-12 10:50:13,701 [cuckoo.core.plugins] DEBUG: Stopped auxiliary module: Sniffer\n", 
+            "2023-07-12 10:50:13,701 [cuckoo.machinery.virtualbox] DEBUG: Stopping vm cuckoo1\n", 
+            "2023-07-12 10:50:14,831 [cuckoo.core.resultserver] DEBUG: Stopped tracking machine 192.168.56.101 for task #29\n", 
+            "2023-07-12 10:50:14,831 [cuckoo.core.resultserver] DEBUG: Cancel <Context for LOG> for task 29\n", 
+            "2023-07-12 10:50:14,834 [cuckoo.core.scheduler] DEBUG: Released database task #29\n", 
+            "2023-07-12 10:50:14,842 [cuckoo.core.plugins] DEBUG: Executed processing module \"AnalysisInfo\" for task #29\n", 
+            "2023-07-12 10:50:14,842 [cuckoo.processing.behavior] WARNING: Analysis results folder does not contain any behavior log files.\n", 
+            "2023-07-12 10:50:14,842 [cuckoo.core.plugins] DEBUG: Executed processing module \"BehaviorAnalysis\" for task #29\n", 
+            "2023-07-12 10:50:14,842 [cuckoo.core.plugins] DEBUG: Executed processing module \"Dropped\" for task #29\n", 
+            "2023-07-12 10:50:14,842 [cuckoo.core.plugins] DEBUG: Executed processing module \"DroppedBuffer\" for task #29\n", 
+            "2023-07-12 10:50:14,843 [cuckoo.core.plugins] DEBUG: Executed processing module \"MetaInfo\" for task #29\n", 
+            "2023-07-12 10:50:14,843 [cuckoo.core.plugins] DEBUG: Executed processing module \"ProcessMemory\" for task #29\n", 
+            "2023-07-12 10:50:14,843 [cuckoo.core.plugins] DEBUG: Executed processing module \"Procmon\" for task #29\n", 
+            "2023-07-12 10:50:14,843 [cuckoo.core.plugins] DEBUG: Executed processing module \"Screenshots\" for task #29\n", 
+            "2023-07-12 10:50:14,998 [cuckoo.core.plugins] DEBUG: Executed processing module \"Static\" for task #29\n", 
+            "2023-07-12 10:50:15,005 [cuckoo.core.plugins] DEBUG: Executed processing module \"Strings\" for task #29\n", 
+            "2023-07-12 10:50:15,010 [cuckoo.core.plugins] DEBUG: Executed processing module \"TargetInfo\" for task #29\n", 
+            "2023-07-12 10:50:15,018 [cuckoo.core.plugins] DEBUG: Executed processing module \"NetworkAnalysis\" for task #29\n", 
+            "2023-07-12 10:50:15,018 [cuckoo.core.plugins] DEBUG: Executed processing module \"Extracted\" for task #29\n", 
+            "2023-07-12 10:50:15,018 [cuckoo.core.plugins] DEBUG: Executed processing module \"TLSMasterSecrets\" for task #29\n", 
+            "2023-07-12 10:50:15,019 [cuckoo.core.plugins] DEBUG: Executed processing module \"Debug\" for task #29\n", 
+            "2023-07-12 10:50:15,026 [cuckoo.core.plugins] DEBUG: Running 542 signatures\n", 
+            "2023-07-12 10:50:15,073 [cuckoo.core.plugins] DEBUG: Analysis matched signature: packer_en"
+        ]
+    }, 
+    "strings": [
+        "!This program cannot be run in DOS mode.", 
+        "P`.data", 
+        ".rdata", 
+        "0@.bss", 
+        ".idata", 
+        "S8+K89S$", 
+        "$9D$8v", 
+        "T$l+T$", 
+        "L$l+L$", 
+        "C$9D$Dw3", 
+        "+D$,9D$0", 
+        "t$$+t$,9", 
+        "D$$;E$w1", 
+        "D$l)D$8", 
+        "\\$d)\\$0", 
+        "<\\t5</t1", 
+        "<\\tP</tL", 
+        "D$p9D$0", 
+        "D$\\9D$", 
+        "9l$Xv,", 
+        "9|$Xv7", 
+        "libgcc_s_dw2-1.dll", 
+        "__register_frame_info", 
+        "libgcj-13.dll", 
+        "_Jv_RegisterClasses", 
+        "__deregister_frame_info", 
+        "kernel32", 
+        "LockResource", 
+        "GetThreadContext", 
+        "Vir%s%scEx", 
+        "Wr%sProcess%sory", 
+        "SetThreadContext", 
+        "ResumeThread", 
+        "ole32.dll", 
+        "CoInitializeEx", 
+        "CoCreateInstance", 
+        "J=oG@nI", 
+        "nCO&BB", 
+        "ccJYo7V!", 
+        "P69!Fwu", 
+        "dn$\\_B", 
+        "Mingw runtime failure:", 
+        "  VirtualQuery failed for %d bytes at address %p", 
+        "  Unknown pseudo relocation protocol version %d.", 
+        "  Unknown pseudo relocation bit size %d.", 
+        "glob-1.0-mingw32", 
+        "(null)", 
+        "PRINTF_EXPONENT_DIGITS", 
+        "Infinity", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.1", 
+        "GCC: (GNU) 4.8.1", 
+        "GCC: (GNU) 4.8.1", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.1", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.2", 
+        "GCC: (GNU) 4.8.1", 
+        "GCC: (GNU) 4.8.1", 
+        "GCC: (GNU) 4.8.1", 
+        "GCC: (GNU) 4.8.1", 
+        "DeleteObject", 
+        "GetStockObject", 
+        "CreateProcessW", 
+        "DeleteCriticalSection", 
+        "EnterCriticalSection", 
+        "ExitProcess", 
+        "FindClose", 
+        "FindFirstFileA", 
+        "FindNextFileA", 
+        "FindResourceW", 
+        "GetCommandLineA", 
+        "GetLastError", 
+        "GetModuleFileNameW", 
+        "GetModuleHandleA", 
+        "GetProcAddress", 
+        "GetStartupInfoA", 
+        "InitializeCriticalSection", 
+        "InterlockedExchange", 
+        "IsDBCSLeadByteEx", 
+        "LeaveCriticalSection", 
+        "LoadLibraryA", 
+        "LoadResource", 
+        "MultiByteToWideChar", 
+        "SetUnhandledExceptionFilter", 
+        "TlsGetValue", 
+        "VirtualProtect", 
+        "VirtualQuery", 
+        "WideCharToMultiByte", 
+        "_strdup", 
+        "_stricoll", 
+        "__getmainargs", 
+        "__mb_cur_max", 
+        "__p__environ", 
+        "__p__fmode", 
+        "__set_app_type", 
+        "_cexit", 
+        "_errno", 
+        "_fullpath", 
+        "_onexit", 
+        "_setmode", 
+        "atexit", 
+        "calloc", 
+        "fwrite", 
+        "getenv", 
+        "isspace", 
+        "localeconv", 
+        "malloc", 
+        "mbstowcs", 
+        "memcpy", 
+        "realloc", 
+        "setlocale", 
+        "signal", 
+        "sprintf", 
+        "strchr", 
+        "strcoll", 
+        "strlen", 
+        "tolower", 
+        "vfprintf", 
+        "wcslen", 
+        "wcstombs", 
+        "CoInitializeEx", 
+        "SHGetFolderPathA", 
+        "DispatchMessageA", 
+        "GetMessageA", 
+        "ShowWindow", 
+        "TranslateMessage", 
+        "UpdateWindow", 
+        "GDI32.dll", 
+        "KERNEL32.dll", 
+        "msvcrt.dll", 
+        "msvcrt.dll", 
+        "OLE32.dll", 
+        "SHELL32.DLL", 
+        "USER32.dll", 
+        "H\u001f\u001f\u001fT!!!Y!!!Y\u001f\u001f\u001fT", 
+        "J<<<pbbb", 
+        ">545jppq", 
+        "7*)+^uuv", 
+        "4#Z)* G", 
+        "H9m4( G", 
+        "PAuA, K", 
+        "SCwF- N", 
+        "UDzE/\"Q", 
+        "UE}?7'Z", 
+        "Q?}0;,c", 
+        "?,o#=.f", 
+        "Q<<<qVVV", 
+        "3!!!U[[[", 
+        "<EEFywww", 
+        "\">>>lzzz", 
+        "///TVVV", 
+        "{_aPkSX", 
+        "|i/!00", 
+        "Prc=@Mk", 
+        "klE;_~", 
+        "vpwScg", 
+        "g>\u001ft|Z", 
+        "U3$<qL", 
+        "S;QNi_k", 
+        "11\\`@k#", 
+        "wtQ?yF", 
+        "Sowkr/", 
+        "7ZNbVx", 
+        "2rZ~c`u", 
+        "IzT0&lG", 
+        "{Bod3\\", 
+        ";ued`s ", 
+        "#UX~#k", 
+        "uc{@Y`", 
+        "VN%\\\u001fR", 
+        "ub&cBp", 
+        "@u^6<e", 
+        "gn35!b#", 
+        "x[&E3*_~", 
+        "CN4l0hDv", 
+        "VCC^RJ", 
+        "ZnXA85np", 
+        "wy(<B ^", 
+        "Fb+RB^", 
+        "a:?7_B", 
+        "2#Au$DRJ", 
+        "V6Z<-1", 
+        "|JJXEY", 
+        "4VJS~[", 
+        "lr'%au)", 
+        ";>$m@4", 
+        "QvwwMv", 
+        "r.2clgS", 
+        "}R~>bY", 
+        "}}Csuz", 
+        "1mN8 l", 
+        "@dG3mw", 
+        "}'75F3", 
+        "%E0J ~", 
+        "^bYnvl", 
+        "\u001fhMerK!+", 
+        "m9zb'G", 
+        "RZ?X-#hBi", 
+        "N[,5N*", 
+        "l/5WX#50\\", 
+        "s86I9oF", 
+        "2L[.Fb", 
+        "#Rc/yL", 
+        "tY+ePa/H.f`", 
+        "<P\"AH|", 
+        "XP6iI*", 
+        "g2T\\b\\nq", 
+        "M`#{We", 
+        "$VRv;,", 
+        "J~h~:2", 
+        "2GtW^%", 
+        "_ 1V@W", 
+        "'T^evE", 
+        "azc$!A", 
+        "t=CnO{", 
+        "'G%ALX", 
+        ".Q@flWri", 
+        "8$)r[_F", 
+        "lRb:0G", 
+        "AaS^q!", 
+        "7*d2RXk", 
+        "zJ&Vjk<", 
+        "w\u001f(3!&+[", 
+        "^VJB$v", 
+        "/9Cc7F", 
+        "Ft u[N", 
+        "%}*vq'N", 
+        "K-t\\\u001fGzI", 
+        "Q+\u001fKFB", 
+        ">D`jWq", 
+        "0m3tkHe", 
+        "k{IHi2", 
+        ":soa)03UY[", 
+        "/NE:},", 
+        "UJO9fxr", 
+        "7\u001fl#QN<", 
+        "f}\"Wv<h]", 
+        "XVvbHC%", 
+        "&Db+pp", 
+        "{p*J^T", 
+        "+a\u001fsM&_", 
+        "]G+^9u<N", 
+        "S$>GZV/)?", 
+        "fN@+R5", 
+        "OWf@??", 
+        "+<BS1D`", 
+        "OQt2\u001fG", 
+        "]/[7plL]K", 
+        "q\\S.Z1", 
+        "nbR:,t", 
+        "b)Cm=o^", 
+        "\\oE\\2+", 
+        "~p}XN\\", 
+        "4bz'D)", 
+        "CB20+X", 
+        "B)F\\'2", 
+        "rm3H(v'&nx", 
+        "mjvL<q&", 
+        "be#9A<", 
+        "y>C@Vp", 
+        "g|bi]{", 
+        "F5{\u001f&q\\", 
+        "%b]-z@", 
+        "g$v-=4i", 
+        "5)asK-n/", 
+        "a2qfzGea", 
+        "IS(@*.", 
+        "!5V;6i", 
+        "~L;&b<E", 
+        "Ff+^'C", 
+        "pxEsf\u001f", 
+        "PMFV+&", 
+        "=5a}5k", 
+        "6Y#^\":", 
+        "Xb8em;", 
+        "|R9FC[", 
+        "l99\"`!M", 
+        "Wt$8G!", 
+        "wNKAqj", 
+        "B4-)cn", 
+        "<^#*~k", 
+        ",1#w.`", 
+        "k3lYXY- ", 
+        "jrotM=?f)", 
+        "LUC GTJO\\", 
+        "2x8W 9+P", 
+        "I !]1\u001f", 
+        "L>wv/{", 
+        " f\"p&]", 
+        "0?'{8&h", 
+        "1G?2R2", 
+        "_@nG}}", 
+        "\\8+t>*", 
+        "ZD3fM9", 
+        "oic|O8*", 
+        "s l|k?", 
+        "\"Ai}{S", 
+        "]-oy?;%", 
+        "UVcSp$", 
+        "3t|#Y ", 
+        "HaX$q\"o", 
+        "}_~XwP", 
+        "9-5wNW", 
+        "mQaDQ5d]", 
+        "!Pppxx", 
+        "10bS(@G", 
+        ":a\\|JxM", 
+        ":\\\u001f!Lu", 
+        "_L2FPF", 
+        "z)~ 9?A", 
+        "^x`pp|i", 
+        ">=_S:w9&", 
+        "h~IKMJQ", 
+        "6E$\u001fs;\u001f", 
+        "wx}[nvS4q", 
+        "R6X_\"1D|", 
+        "=\u001fah%;", 
+        " d$a,&U", 
+        "-4^i_Ebp$", 
+        "VIWW%*", 
+        " ,!e{Y)hT", 
+        "Es0wUu", 
+        "Pf]C\u001fQ ", 
+        ".M:ERW", 
+        "9qIy3/>", 
+        "GeA/Tu", 
+        "\u001f,2<Ix", 
+        "i1o$>\u001f", 
+        "q{IVC0C", 
+        "%8CoQ,", 
+        "G`(&Yj ", 
+        "ASO8HT", 
+        "|2vy'5", 
+        "Cr+fp@", 
+        "1u70li", 
+        "l!NwTS", 
+        "8Tv\"2r", 
+        "%%Dv7cfa{u", 
+        "GBIx}=", 
+        "I.O4.[9X", 
+        "DK?FvM", 
+        "C}/iiESj", 
+        "Yywt)hK", 
+        "<pvE8S", 
+        "\\Oec6E", 
+        "@IzQ]i}R", 
+        "i 4z<i", 
+        "#7M\"A22", 
+        "?t(rdq", 
+        "15>q?U", 
+        "\"a=9lP", 
+        "<?xml version='1.0' encoding='UTF-8' standalone='yes'?> ", 
+        "<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>   ", 
+        " <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\">    ", 
+        " <security>   ", 
+        "<requestedPrivileges>         ", 
+        "<requestedExecutionLevel level='asInvoker' uiAccess='false' />             ", 
+        "</requestedPrivileges>       ", 
+        "   </security>     ", 
+        " </trustInfo>           ", 
+        "</assembly>", 
+        ".eh_frame", 
+        "OfSection", 
+        "ZwUnmapView", 
+        "CLSID_AsyncReader2", 
+        "f(null)"
+    ], 
+    "metadata": {
+        "output": {
+            "pcap": {
+                "basename": "dump.pcap", 
+                "sha256": "b234a2cf510f041d0e159053071d70dc2079915de72c80bdf397220df1ad465e", 
+                "dirname": ""
+            }
+        }
+    }
+}
