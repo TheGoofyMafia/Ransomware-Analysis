@@ -1,0 +1,605 @@
+{
+    "info": {
+        "added": 1689084380.121238, 
+        "started": 1689084380.798291, 
+        "duration": 189, 
+        "ended": 1689084570.137898, 
+        "owner": null, 
+        "score": 0.6, 
+        "id": 24, 
+        "category": "file", 
+        "git": {
+            "head": "13cbe0d9e457be3673304533043e992ead1ea9b2", 
+            "fetch_head": "13cbe0d9e457be3673304533043e992ead1ea9b2"
+        }, 
+        "monitor": "2deb9ccd75d5a7a3fe05b2625b03a8639d6ee36b", 
+        "package": "exe", 
+        "route": "none", 
+        "custom": null, 
+        "machine": {
+            "status": "stopped", 
+            "name": "cuckoo1", 
+            "label": "cuckoo1", 
+            "manager": "VirtualBox", 
+            "started_on": "2023-07-11 14:06:20", 
+            "shutdown_on": "2023-07-11 14:09:30"
+        }, 
+        "platform": "windows", 
+        "version": "2.0.7", 
+        "options": "procmemdump=yes,route=none"
+    }, 
+    "signatures": [
+        {
+            "families": [], 
+            "description": "The executable contains unknown PE section names indicative of a packer (could be a false positive)", 
+            "severity": 1, 
+            "ttp": {
+                "T1045": {
+                    "short": "Software Packing", 
+                    "long": "Software packing is a method of compressing or encrypting an executable. Packing an executable changes the file signature in an attempt to avoid signature-based detection. Most decompression techniques decompress the executable code in memory."
+                }
+            }, 
+            "markcount": 2, 
+            "references": [], 
+            "marks": [
+                {
+                    "category": "section", 
+                    "ioc": ".text1", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "section", 
+                    "ioc": ".ndata", 
+                    "type": "ioc", 
+                    "description": null
+                }
+            ], 
+            "name": "pe_features"
+        }, 
+        {
+            "families": [], 
+            "description": "The binary likely contains encrypted or compressed data indicative of a packer", 
+            "severity": 2, 
+            "ttp": {
+                "T1045": {
+                    "short": "Software Packing", 
+                    "long": "Software packing is a method of compressing or encrypting an executable. Packing an executable changes the file signature in an attempt to avoid signature-based detection. Most decompression techniques decompress the executable code in memory."
+                }
+            }, 
+            "markcount": 3, 
+            "references": [
+                "http://www.forensickb.com/2013/03/file-entropy-explained.html", 
+                "http://virii.es/U/Using%20Entropy%20Analysis%20to%20Find%20Encrypted%20and%20Packed%20Malware.pdf"
+            ], 
+            "marks": [
+                {
+                    "entropy": 7.592614994062742, 
+                    "section": {
+                        "size_of_data": "0x00003200", 
+                        "virtual_address": "0x0000d000", 
+                        "entropy": 7.592614994062742, 
+                        "name": ".data", 
+                        "virtual_size": "0x00013a28"
+                    }, 
+                    "type": "generic", 
+                    "description": "A section with a high entropy has been found"
+                }, 
+                {
+                    "entropy": 7.953714911050297, 
+                    "section": {
+                        "size_of_data": "0x00001200", 
+                        "virtual_address": "0x00021000", 
+                        "entropy": 7.953714911050297, 
+                        "name": ".ndata", 
+                        "virtual_size": "0x000011e3"
+                    }, 
+                    "type": "generic", 
+                    "description": "A section with a high entropy has been found"
+                }, 
+                {
+                    "entropy": 0.3063063063063063, 
+                    "type": "generic", 
+                    "description": "Overall entropy of this PE file is high"
+                }
+            ], 
+            "name": "packer_entropy"
+        }
+    ], 
+    "target": {
+        "category": "file", 
+        "file": {
+            "yara": [], 
+            "sha1": "c511ae4d80aaa281c610190aa13630de61ca714c", 
+            "name": "acer.exe", 
+            "type": "PE32 executable (GUI) Intel 80386, for MS Windows", 
+            "sha256": "0a0c225f0e5ee941a79f2b7701f1285e4975a2859eb4d025d96d9e366e81abb9", 
+            "urls": [], 
+            "crc32": "44B86D7A", 
+            "path": "/root/.cuckoo/storage/binaries/0a0c225f0e5ee941a79f2b7701f1285e4975a2859eb4d025d96d9e366e81abb9", 
+            "ssdeep": null, 
+            "size": 57856, 
+            "sha512": "d7b7b6a968e6d7b7f3e7f98decb6b331b08122e491bf0b0dbe243223fb177218a758c34830f20c47f2a799acdd146297ec7f930c2bb4d5c6830ce65c8274ea6d", 
+            "md5": "979692cd7fc638beea6e9d68c752f360"
+        }
+    }, 
+    "network": {
+        "tls": [], 
+        "udp": [
+            {
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "offset": 1358, 
+                "time": 6.063540935516357, 
+                "dport": 137, 
+                "sport": 137
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "offset": 17774, 
+                "time": 12.126337051391602, 
+                "dport": 138, 
+                "sport": 138
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 28872, 
+                "time": 3.942434072494507, 
+                "dport": 5355, 
+                "sport": 50570
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 29216, 
+                "time": 142.9903109073639, 
+                "dport": 5355, 
+                "sport": 50969
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 29536, 
+                "time": 163.49301290512085, 
+                "dport": 5355, 
+                "sport": 50992
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 29856, 
+                "time": 2.9597859382629395, 
+                "dport": 5355, 
+                "sport": 51920
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 30200, 
+                "time": 145.55618810653687, 
+                "dport": 5355, 
+                "sport": 52074
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 30520, 
+                "time": 158.3696711063385, 
+                "dport": 5355, 
+                "sport": 52619
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 30840, 
+                "time": 6.018189907073975, 
+                "dport": 5355, 
+                "sport": 52733
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 31184, 
+                "time": 150.67933797836304, 
+                "dport": 5355, 
+                "sport": 53246
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 31504, 
+                "time": 17.673458099365234, 
+                "dport": 5355, 
+                "sport": 54154
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 31824, 
+                "time": 34.52050995826721, 
+                "dport": 5355, 
+                "sport": 54248
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 32168, 
+                "time": 155.80674290657043, 
+                "dport": 5355, 
+                "sport": 54757
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 32488, 
+                "time": 135.3015010356903, 
+                "dport": 5355, 
+                "sport": 54803
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 32808, 
+                "time": 6.392282962799072, 
+                "dport": 5355, 
+                "sport": 56765
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 33136, 
+                "time": 140.4335219860077, 
+                "dport": 5355, 
+                "sport": 57276
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 33456, 
+                "time": 137.86496806144714, 
+                "dport": 5355, 
+                "sport": 57902
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 33776, 
+                "time": 34.217211961746216, 
+                "dport": 5355, 
+                "sport": 58201
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 34120, 
+                "time": 160.93108892440796, 
+                "dport": 5355, 
+                "sport": 59893
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 34440, 
+                "time": 148.1177248954773, 
+                "dport": 5355, 
+                "sport": 61133
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 34760, 
+                "time": 3.2174808979034424, 
+                "dport": 5355, 
+                "sport": 64969
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "224.0.0.252", 
+                "offset": 35088, 
+                "time": 153.24240493774414, 
+                "dport": 5355, 
+                "sport": 65028
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "offset": 35408, 
+                "time": 6.11130690574646, 
+                "dport": 3702, 
+                "sport": 49152
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "offset": 43784, 
+                "time": 88.80448603630066, 
+                "dport": 1900, 
+                "sport": 54251
+            }, 
+            {
+                "src": "192.168.56.101", 
+                "dst": "255.255.255.255", 
+                "offset": 46076, 
+                "time": 17.724592924118042, 
+                "dport": 67, 
+                "sport": 68
+            }
+        ], 
+        "dns_servers": [], 
+        "http": [], 
+        "icmp": [], 
+        "smtp": [], 
+        "tcp": [], 
+        "smtp_ex": [], 
+        "mitm": [], 
+        "hosts": [], 
+        "pcap_sha256": "72392d0a98f34180eeee4a801f78c6abbbed2010294f337e5a5b029c871f7d61", 
+        "dns": [], 
+        "http_ex": [], 
+        "domains": [], 
+        "dead_hosts": [], 
+        "sorted_pcap_sha256": "3df49d912c7c981ae4ada02f1572ac347d9f379bbaa41eeb81bf4ebfbdf38251", 
+        "irc": [], 
+        "https_ex": []
+    }, 
+    "static": {
+        "pdb_path": null, 
+        "pe_imports": [
+            {
+                "imports": [
+                    {
+                        "name": "ExitProcess", 
+                        "address": "0x40c000"
+                    }
+                ], 
+                "dll": "KERNEL32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "NtWriteVirtualMemory", 
+                        "address": "0x40c008"
+                    }, 
+                    {
+                        "name": "NtReadVirtualMemory", 
+                        "address": "0x40c00c"
+                    }
+                ], 
+                "dll": "ntdll.dll"
+            }
+        ], 
+        "peid_signatures": null, 
+        "keys": [], 
+        "signature": [], 
+        "pe_timestamp": "2021-04-05 18:09:09", 
+        "pe_exports": [], 
+        "imported_dll_count": 2, 
+        "pe_imphash": "d7eea11ae47ec0d735ecd47e54de8af5", 
+        "pe_resources": [], 
+        "pe_versioninfo": [], 
+        "pe_sections": [
+            {
+                "size_of_data": "0x00009400", 
+                "virtual_address": "0x00001000", 
+                "entropy": 6.095673338041794, 
+                "name": ".text", 
+                "virtual_size": "0x000093ab"
+            }, 
+            {
+                "size_of_data": "0x00000400", 
+                "virtual_address": "0x0000b000", 
+                "entropy": 4.9037636192885365, 
+                "name": ".text1", 
+                "virtual_size": "0x000002e0"
+            }, 
+            {
+                "size_of_data": "0x00000200", 
+                "virtual_address": "0x0000c000", 
+                "entropy": 3.4318872738714457, 
+                "name": ".rdata", 
+                "virtual_size": "0x000001c0"
+            }, 
+            {
+                "size_of_data": "0x00003200", 
+                "virtual_address": "0x0000d000", 
+                "entropy": 7.592614994062742, 
+                "name": ".data", 
+                "virtual_size": "0x00013a28"
+            }, 
+            {
+                "size_of_data": "0x00001200", 
+                "virtual_address": "0x00021000", 
+                "entropy": 7.953714911050297, 
+                "name": ".ndata", 
+                "virtual_size": "0x000011e3"
+            }
+        ]
+    }, 
+    "debug": {
+        "action": [], 
+        "dbgview": [], 
+        "errors": [], 
+        "log": [
+            "2023-07-11 14:06:20,091 [analyzer] DEBUG: Starting analyzer from: C:\\tmpk2igrl\n", 
+            "2023-07-11 14:06:20,091 [analyzer] DEBUG: Pipe server name: \\??\\PIPE\\BrxYrplufuGtMRuLumfKOPveVGnmJB\n", 
+            "2023-07-11 14:06:20,091 [analyzer] DEBUG: Log pipe server name: \\??\\PIPE\\hHBaJffYDkYUuPzUVY\n", 
+            "2023-07-11 14:06:20,183 [analyzer] DEBUG: Started auxiliary module DbgView\n", 
+            "2023-07-11 14:06:20,535 [analyzer] DEBUG: Started auxiliary module Disguise\n", 
+            "2023-07-11 14:06:21,882 [analyzer] DEBUG: Started auxiliary module DumpTLSMasterSecrets\n", 
+            "2023-07-11 14:06:21,928 [analyzer] DEBUG: Started auxiliary module Human\n", 
+            "2023-07-11 14:06:21,974 [analyzer] DEBUG: Started auxiliary module InstallCertificate\n", 
+            "2023-07-11 14:06:21,974 [analyzer] DEBUG: Started auxiliary module Reboot\n", 
+            "2023-07-11 14:06:22,006 [analyzer] DEBUG: Started auxiliary module RecentFiles\n", 
+            "2023-07-11 14:06:22,082 [analyzer] DEBUG: Started auxiliary module Screenshots\n", 
+            "2023-07-11 14:06:22,082 [modules.auxiliary.screenshots] INFO: Python Image Library (either PIL or Pillow) is not installed, screenshots are disabled.\n", 
+            "2023-07-11 14:06:22,082 [analyzer] DEBUG: Started auxiliary module LoadZer0m0n\n", 
+            "2023-07-11 14:06:30,773 [lib.api.process] INFO: Successfully executed process from path u'C:\\\\Users\\\\cuckoo1\\\\AppData\\\\Local\\\\Temp\\\\acer.exe' with arguments '' and pid 2468\n", 
+            "2023-07-11 14:06:38,992 [analyzer] INFO: Process with pid 2468 has terminated\n", 
+            "2023-07-11 14:06:38,992 [analyzer] INFO: Process list is empty, terminating analysis.\n", 
+            "2023-07-11 14:06:39,992 [analyzer] INFO: Analysis completed.\n"
+        ], 
+        "cuckoo": [
+            "2023-07-11 14:06:20,823 [cuckoo.core.scheduler] INFO: Task #24: acquired machine cuckoo1 (label=cuckoo1)\n", 
+            "2023-07-11 14:06:20,823 [cuckoo.core.resultserver] DEBUG: Now tracking machine 192.168.56.101 for task #24\n", 
+            "2023-07-11 14:06:20,823 [cuckoo.core.plugins] DEBUG: Started auxiliary module: Replay\n", 
+            "2023-07-11 14:06:20,826 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 18622 (interface=vboxnet0, host=192.168.56.101)\n", 
+            "2023-07-11 14:06:20,827 [cuckoo.core.plugins] DEBUG: Started auxiliary module: Sniffer\n", 
+            "2023-07-11 14:06:20,836 [cuckoo.machinery.virtualbox] DEBUG: Starting vm cuckoo1\n", 
+            "2023-07-11 14:06:20,890 [cuckoo.machinery.virtualbox] DEBUG: Restoring virtual machine cuckoo1 to its current snapshot\n", 
+            "2023-07-11 14:06:22,284 [cuckoo.core.guest] INFO: Starting analysis #24 on guest (id=cuckoo1, ip=192.168.56.101)\n", 
+            "2023-07-11 14:06:23,286 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet\n", 
+            "2023-07-11 14:06:24,289 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet\n", 
+            "2023-07-11 14:06:25,295 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet\n", 
+            "2023-07-11 14:06:25,356 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet\n", 
+            "2023-07-11 14:06:26,372 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.101)\n", 
+            "2023-07-11 14:06:26,382 [cuckoo.core.guest] DEBUG: Uploading analyzer to guest (id=cuckoo1, ip=192.168.56.101, monitor=latest, size=3884763)\n", 
+            "2023-07-11 14:06:26,560 [cuckoo.core.resultserver] DEBUG: Task #24: live log analysis.log initialized.\n", 
+            "2023-07-11 14:06:31,510 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #24 still processing\n", 
+            "2023-07-11 14:06:36,554 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #24 still processing\n", 
+            "2023-07-11 14:06:40,497 [cuckoo.core.resultserver] DEBUG: Task #24 had connection reset for <Context for LOG>\n", 
+            "2023-07-11 14:06:45,576 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:06:51,580 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:06:51,585 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #24 still processing\n", 
+            "2023-07-11 14:06:57,592 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:03,604 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:09,616 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:15,629 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:21,644 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:21,648 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #24 still processing\n", 
+            "2023-07-11 14:07:27,656 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:33,668 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:39,681 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:45,695 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:51,708 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:07:51,709 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #24 still processing\n", 
+            "2023-07-11 14:07:57,717 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:03,730 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:09,744 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:15,757 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:21,768 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:21,771 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #24 still processing\n", 
+            "2023-07-11 14:08:27,776 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:33,790 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:39,805 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:45,818 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:51,832 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:08:51,835 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #24 still processing\n", 
+            "2023-07-11 14:08:57,844 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:09:03,858 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:09:09,868 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:09:15,880 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:09:21,892 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:09:21,897 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #24 still processing\n", 
+            "2023-07-11 14:09:27,906 [cuckoo.core.guest] WARNING: Virtual Machine /status failed. This can indicate the guest losing network connectivity\n", 
+            "2023-07-11 14:09:28,912 [cuckoo.core.guest] INFO: cuckoo1: end of analysis reached!\n", 
+            "2023-07-11 14:09:28,930 [cuckoo.core.plugins] DEBUG: Stopped auxiliary module: Replay\n", 
+            "2023-07-11 14:09:28,977 [cuckoo.core.plugins] DEBUG: Stopped auxiliary module: Sniffer\n", 
+            "2023-07-11 14:09:28,978 [cuckoo.machinery.virtualbox] DEBUG: Stopping vm cuckoo1\n", 
+            "2023-07-11 14:09:30,128 [cuckoo.core.resultserver] DEBUG: Stopped tracking machine 192.168.56.101 for task #24\n", 
+            "2023-07-11 14:09:30,131 [cuckoo.core.scheduler] DEBUG: Released database task #24\n", 
+            "2023-07-11 14:09:30,142 [cuckoo.core.plugins] DEBUG: Executed processing module \"AnalysisInfo\" for task #24\n", 
+            "2023-07-11 14:09:30,143 [cuckoo.processing.behavior] WARNING: Analysis results folder does not contain any behavior log files.\n", 
+            "2023-07-11 14:09:30,143 [cuckoo.core.plugins] DEBUG: Executed processing module \"BehaviorAnalysis\" for task #24\n", 
+            "2023-07-11 14:09:30,143 [cuckoo.core.plugins] DEBUG: Executed processing module \"Dropped\" for task #24\n", 
+            "2023-07-11 14:09:30,143 [cuckoo.core.plugins] DEBUG: Executed processing module \"DroppedBuffer\" for task #24\n", 
+            "2023-07-11 14:09:30,144 [cuckoo.core.plugins] DEBUG: Executed processing module \"MetaInfo\" for task #24\n", 
+            "2023-07-11 14:09:30,144 [cuckoo.core.plugins] DEBUG: Executed processing module \"ProcessMemory\" for task #24\n", 
+            "2023-07-11 14:09:30,144 [cuckoo.core.plugins] DEBUG: Executed processing module \"Procmon\" for task #24\n", 
+            "2023-07-11 14:09:30,144 [cuckoo.core.plugins] DEBUG: Executed processing module \"Screenshots\" for task #24\n", 
+            "2023-07-11 14:09:30,342 [cuckoo.core.plugins] DEBUG: Executed processing module \"Static\" for task #24\n", 
+            "2023-07-11 14:09:30,345 [cuckoo.core.plugins] DEBUG: Executed processing module \"Strings\" for task #24\n", 
+            "2023-07-11 14:09:30,347 [cuckoo.core.plugins] DEBUG: Executed processing module \"TargetInfo\" for task #24\n", 
+            "2023-07-11 14:09:30,376 [cuckoo.core.plugins] DEBUG: Executed processing module \"NetworkAnalysis\" for tas"
+        ]
+    }, 
+    "strings": [
+        "!This program cannot be run in DOS mode.", 
+        "`.text1", 
+        "`.rdata", 
+        "@.data", 
+        ".ndata", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "X_^ZY[", 
+        "SQRVWh", 
+        "_^ZY[]", 
+        "SQRVW3", 
+        "SQRVW3", 
+        "_^ZY[]", 
+        "SQRVW3", 
+        "_^ZY[]", 
+        "SQRVWh", 
+        "PSQRVW", 
+        "_^ZY[X", 
+        "SQRVW3", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "SQRVWh9", 
+        "_^ZY[]", 
+        "_^[ZY]", 
+        "_^ZY[]", 
+        "SQRVW3", 
+        "_^ZY[]", 
+        "SQRVWh~", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "SQRVWj", 
+        "SQRVWh^", 
+        "SQRVWj", 
+        "SQRVWh", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        "_^ZY[]", 
+        ".text1", 
+        ".idata$5", 
+        ".rdata", 
+        ".rdata$zzzdbg", 
+        ".idata$2", 
+        ".idata$3", 
+        ".idata$4", 
+        ".idata$6", 
+        ".ndata", 
+        "ExitProcess", 
+        "KERNEL32.dll", 
+        "NtReadVirtualMemory", 
+        "NtWriteVirtualMemory", 
+        "ntdll.dll", 
+        "qU3ox9", 
+        "<I# zL", 
+        "u`&T$.", 
+        "DUZAov^79", 
+        "T[H\u001fp6Z", 
+        "`$@W}k", 
+        "o^.3RK", 
+        "-j<HY5g", 
+        ")ji<!X", 
+        "(.(OWqvi^a", 
+        "[k;8)zM", 
+        "7/oB@1", 
+        "ox0ku!", 
+        "r%c9\u001fB({", 
+        "Q8];q|", 
+        "\u001f\\?0=F", 
+        "uvu&hn", 
+        "z6zD$_szn`", 
+        "iT)K\"L", 
+        "Ajjjjj"
+    ], 
+    "metadata": {
+        "output": {
+            "pcap": {
+                "basename": "dump.pcap", 
+                "sha256": "72392d0a98f34180eeee4a801f78c6abbbed2010294f337e5a5b029c871f7d61", 
+                "dirname": ""
+            }
+        }
+    }
+}
