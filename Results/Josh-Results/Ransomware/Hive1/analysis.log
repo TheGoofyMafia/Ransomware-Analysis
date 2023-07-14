@@ -1,0 +1,12 @@
+2023-07-14 15:57:06,046 [analyzer] DEBUG: Starting analyzer from: C:\tmpbhv_ec
+2023-07-14 15:57:06,046 [analyzer] DEBUG: Pipe server name: \??\PIPE\RAGAFvOPMRqoCByYAPkPGBSUfIXvTDuS
+2023-07-14 15:57:06,046 [analyzer] DEBUG: Log pipe server name: \??\PIPE\DqUvOnKEBxpTkYiOOEtL
+2023-07-14 15:57:06,187 [analyzer] DEBUG: Started auxiliary module DbgView
+2023-07-14 15:57:06,578 [analyzer] DEBUG: Started auxiliary module Disguise
+2023-07-14 15:57:08,983 [analyzer] DEBUG: Started auxiliary module DumpTLSMasterSecrets
+2023-07-14 15:57:09,125 [analyzer] DEBUG: Started auxiliary module Human
+2023-07-14 15:57:09,171 [analyzer] DEBUG: Started auxiliary module InstallCertificate
+2023-07-14 15:57:09,171 [analyzer] DEBUG: Started auxiliary module Reboot
+2023-07-14 15:57:09,203 [analyzer] DEBUG: Started auxiliary module RecentFiles
+2023-07-14 15:57:09,233 [analyzer] DEBUG: Started auxiliary module Screenshots
+2023-07-14 15:57:09,233 [analyzer] DEBUG: Started auxiliary module LoadZer0m0n

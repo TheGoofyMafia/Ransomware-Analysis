@@ -1,0 +1,85 @@
+2023-07-14 15:57:07,697 [cuckoo.core.scheduler] INFO: Task #27: acquired machine cuckoo1 (label=cuckoo1)
+2023-07-14 15:57:07,697 [cuckoo.core.resultserver] DEBUG: Now tracking machine 192.168.56.101 for task #27
+2023-07-14 15:57:07,697 [cuckoo.core.plugins] DEBUG: Started auxiliary module: Replay
+2023-07-14 15:57:07,701 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 15058 (interface=vboxnet0, host=192.168.56.101)
+2023-07-14 15:57:07,701 [cuckoo.core.plugins] DEBUG: Started auxiliary module: Sniffer
+2023-07-14 15:57:07,901 [cuckoo.machinery.virtualbox] DEBUG: Starting vm cuckoo1
+2023-07-14 15:57:07,952 [cuckoo.machinery.virtualbox] DEBUG: Restoring virtual machine cuckoo1 to its current snapshot
+2023-07-14 15:57:09,492 [cuckoo.core.guest] INFO: Starting analysis #27 on guest (id=cuckoo1, ip=192.168.56.101)
+2023-07-14 15:57:10,495 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet
+2023-07-14 15:57:11,497 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet
+2023-07-14 15:57:12,502 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet
+2023-07-14 15:57:12,562 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet
+2023-07-14 15:57:13,576 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.101)
+2023-07-14 15:57:13,591 [cuckoo.core.guest] DEBUG: Uploading analyzer to guest (id=cuckoo1, ip=192.168.56.101, monitor=latest, size=3884763)
+2023-07-14 15:57:13,838 [cuckoo.core.resultserver] DEBUG: Task #27: live log analysis.log initialized.
+2023-07-14 15:57:18,235 [cuckoo.core.resultserver] DEBUG: Task #27: File upload for 'shots/0001.jpg'
+2023-07-14 15:57:18,244 [cuckoo.core.resultserver] DEBUG: Task #27 uploaded file length: 99793
+2023-07-14 15:57:18,764 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:57:19,375 [cuckoo.core.resultserver] DEBUG: Task #27: File upload for 'shots/0002.jpg'
+2023-07-14 15:57:19,379 [cuckoo.core.resultserver] DEBUG: Task #27 uploaded file length: 114851
+2023-07-14 15:57:23,784 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:57:28,804 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:57:33,823 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:57:38,842 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:57:43,860 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:57:48,879 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:57:53,898 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:57:58,919 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:03,939 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:08,961 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:14,038 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:19,058 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:24,079 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:29,100 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:34,121 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:39,141 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:44,162 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:49,185 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:54,204 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:58:59,224 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:04,243 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:09,263 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:14,283 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:19,300 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:24,321 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:24,522 [cuckoo.core.resultserver] DEBUG: Task #27: File upload for 'shots/0003.jpg'
+2023-07-14 15:59:24,527 [cuckoo.core.resultserver] DEBUG: Task #27 uploaded file length: 125694
+2023-07-14 15:59:29,340 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:34,362 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:39,380 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:44,219 [cuckoo.core.resultserver] DEBUG: Task #27: File upload for 'memory/2644-1.dmp'
+2023-07-14 15:59:44,403 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #27 still processing
+2023-07-14 15:59:44,518 [cuckoo.core.resultserver] WARNING: Uploaded file length larger than upload_max_size, stopping upload.
+2023-07-14 15:59:44,777 [cuckoo.core.resultserver] DEBUG: Task #27 uploaded file length: 134217743
+2023-07-14 15:59:45,406 [cuckoo.core.guest] INFO: cuckoo1: analysis completed successfully
+2023-07-14 15:59:45,410 [cuckoo.core.plugins] DEBUG: Stopped auxiliary module: Replay
+2023-07-14 15:59:45,458 [cuckoo.core.plugins] DEBUG: Stopped auxiliary module: Sniffer
+2023-07-14 15:59:45,458 [cuckoo.machinery.virtualbox] DEBUG: Stopping vm cuckoo1
+2023-07-14 15:59:46,595 [cuckoo.core.resultserver] DEBUG: Stopped tracking machine 192.168.56.101 for task #27
+2023-07-14 15:59:46,595 [cuckoo.core.resultserver] DEBUG: Cancel <Context for LOG> for task 27
+2023-07-14 15:59:46,598 [cuckoo.core.scheduler] DEBUG: Released database task #27
+2023-07-14 15:59:46,608 [cuckoo.core.plugins] DEBUG: Executed processing module "AnalysisInfo" for task #27
+2023-07-14 15:59:46,608 [cuckoo.processing.behavior] WARNING: Analysis results folder does not contain any behavior log files.
+2023-07-14 15:59:46,608 [cuckoo.core.plugins] DEBUG: Executed processing module "BehaviorAnalysis" for task #27
+2023-07-14 15:59:46,608 [cuckoo.core.plugins] DEBUG: Executed processing module "Dropped" for task #27
+2023-07-14 15:59:46,608 [cuckoo.core.plugins] DEBUG: Executed processing module "DroppedBuffer" for task #27
+2023-07-14 15:59:48,131 [cuckoo.core.plugins] DEBUG: Executed processing module "MetaInfo" for task #27
+2023-07-14 15:59:48,757 [cuckoo.core.plugins] DEBUG: Executed processing module "ProcessMemory" for task #27
+2023-07-14 15:59:48,757 [cuckoo.core.plugins] DEBUG: Executed processing module "Procmon" for task #27
+2023-07-14 15:59:48,807 [cuckoo.core.plugins] DEBUG: Executed processing module "Screenshots" for task #27
+2023-07-14 15:59:49,431 [cuckoo.core.plugins] DEBUG: Executed processing module "Static" for task #27
+2023-07-14 15:59:49,549 [cuckoo.core.plugins] DEBUG: Executed processing module "Strings" for task #27
+2023-07-14 15:59:49,620 [cuckoo.core.plugins] DEBUG: Executed processing module "TargetInfo" for task #27
+2023-07-14 15:59:49,631 [cuckoo.core.plugins] DEBUG: Executed processing module "NetworkAnalysis" for task #27
+2023-07-14 15:59:49,631 [cuckoo.core.plugins] DEBUG: Executed processing module "Extracted" for task #27
+2023-07-14 15:59:49,631 [cuckoo.core.plugins] DEBUG: Executed processing module "TLSMasterSecrets" for task #27
+2023-07-14 15:59:49,633 [cuckoo.core.plugins] DEBUG: Executed processing module "Debug" for task #27
+2023-07-14 15:59:49,641 [cuckoo.core.plugins] DEBUG: Running 542 signatures
+2023-07-14 15:59:49,700 [cuckoo.core.plugins] DEBUG: Analysis matched signature: pe_features
+2023-07-14 15:59:49,700 [cuckoo.core.plugins] DEBUG: Analysis matched signature: memdump_tor_urls
+2023-07-14 15:59:49,700 [cuckoo.core.plugins] DEBUG: Analysis matched signature: memdump_urls
+2023-07-14 15:59:49,707 [cuckoo.core.plugins] DEBUG: Executed reporting module "JsonDump"
+2023-07-14 15:59:49,862 [cuckoo.core.plugins] DEBUG: Executed reporting module "MongoDB"
+2023-07-14 15:59:49,862 [cuckoo.core.scheduler] INFO: Task #27: reports generation completed
+2023-07-14 15:59:49,865 [cuckoo.core.scheduler] INFO: Task #27: analysis procedure completed
