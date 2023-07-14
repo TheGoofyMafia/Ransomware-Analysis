@@ -1,0 +1,2 @@
+urls,file,proc_pid,path,type,ext_urls,name,info,program,positives,description,sign_name,families,arguments,category,sign_stacktrace,api,imported_dll_count,dll,pe_res_name,filetype,pe_sec_name,entropy,tcp,hosts,requests,dead_hosts,dns_servers,mitm,udp,domains,proc,process_path,beh_command_line,action,errors,log
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,2,3,3,0,0,0,0,0,0,12,0,0,0,0,0,0,13
