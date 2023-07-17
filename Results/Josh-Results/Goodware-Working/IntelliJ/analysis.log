@@ -1,0 +1,34 @@
+2023-07-17 10:04:03,046 [analyzer] DEBUG: Starting analyzer from: C:\tmpbhv_ec
+2023-07-17 10:04:03,046 [analyzer] DEBUG: Pipe server name: \??\PIPE\ixFVmSZmcClkiRFidrGNhYiIULoUIlAd
+2023-07-17 10:04:03,046 [analyzer] DEBUG: Log pipe server name: \??\PIPE\GrsfYThZUOEOKGvI
+2023-07-17 10:04:03,187 [analyzer] DEBUG: Started auxiliary module DbgView
+2023-07-17 10:04:03,562 [analyzer] DEBUG: Started auxiliary module Disguise
+2023-07-17 07:04:20,548 [analyzer] DEBUG: Started auxiliary module DumpTLSMasterSecrets
+2023-07-17 07:04:20,595 [analyzer] DEBUG: Started auxiliary module Human
+2023-07-17 07:04:20,595 [analyzer] DEBUG: Started auxiliary module InstallCertificate
+2023-07-17 07:04:20,595 [analyzer] DEBUG: Started auxiliary module Reboot
+2023-07-17 07:04:20,704 [analyzer] DEBUG: Started auxiliary module RecentFiles
+2023-07-17 07:04:20,798 [analyzer] DEBUG: Started auxiliary module Screenshots
+2023-07-17 07:04:20,798 [analyzer] DEBUG: Started auxiliary module LoadZer0m0n
+2023-07-17 07:04:26,750 [lib.api.process] INFO: Successfully executed process from path u'C:\\Users\\cukoo1\\AppData\\Local\\Temp\\ideaIU-11.1.5d.exe' with arguments '' and pid 2640
+2023-07-17 07:04:34,986 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:04:37,641 [modules.auxiliary.human] INFO: Found button u'I &Agree', clicking it
+2023-07-17 07:04:42,657 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:04:45,250 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:04:47,688 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:04:50,032 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:04:52,611 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:04:55,266 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:04:57,813 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:04:59,875 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:05:02,173 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:05:04,236 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:05:06,313 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:05:08,423 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:05:10,673 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:05:12,750 [modules.auxiliary.human] INFO: Found button u'&Next >', clicking it
+2023-07-17 07:05:14,813 [modules.auxiliary.human] INFO: Found button u'&Finish', clicking it
+2023-07-17 07:05:15,813 [modules.auxiliary.human] INFO: Found button u'&Finish', clicking it
+2023-07-17 07:05:16,688 [analyzer] INFO: Process with pid 2640 has terminated
+2023-07-17 07:05:16,688 [analyzer] INFO: Process list is empty, terminating analysis.
+2023-07-17 07:05:17,750 [analyzer] INFO: Analysis completed.
