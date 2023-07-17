@@ -1,0 +1,5 @@
+2023-07-17 10:07:35,092 [analyzer] DEBUG: Starting analyzer from: C:\tmpbhv_ec
+2023-07-17 10:07:35,092 [analyzer] DEBUG: Pipe server name: \??\PIPE\LRINtfRylijpUBHF
+2023-07-17 10:07:35,092 [analyzer] DEBUG: Log pipe server name: \??\PIPE\IqZeiJJqklknsnXwGqjlYimy
+2023-07-17 10:07:35,296 [analyzer] DEBUG: Started auxiliary module DbgView
+2023-07-17 10:07:35,717 [analyzer] DEBUG: Started auxiliary module Disguise

@@ -1,0 +1,75 @@
+2023-07-17 10:07:36,875 [cuckoo.core.scheduler] INFO: Task #68: acquired machine cuckoo1 (label=cuckoo1)
+2023-07-17 10:07:36,875 [cuckoo.core.resultserver] DEBUG: Now tracking machine 192.168.56.101 for task #68
+2023-07-17 10:07:36,875 [cuckoo.core.plugins] DEBUG: Started auxiliary module: Replay
+2023-07-17 10:07:36,879 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 53222 (interface=vboxnet0, host=192.168.56.101)
+2023-07-17 10:07:36,879 [cuckoo.core.plugins] DEBUG: Started auxiliary module: Sniffer
+2023-07-17 10:07:36,902 [cuckoo.machinery.virtualbox] DEBUG: Starting vm cuckoo1
+2023-07-17 10:07:36,954 [cuckoo.machinery.virtualbox] DEBUG: Restoring virtual machine cuckoo1 to its current snapshot
+2023-07-17 10:07:38,449 [cuckoo.core.guest] INFO: Starting analysis #68 on guest (id=cuckoo1, ip=192.168.56.101)
+2023-07-17 10:07:39,451 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet
+2023-07-17 10:07:40,454 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet
+2023-07-17 10:07:41,460 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet
+2023-07-17 10:07:42,465 [cuckoo.core.guest] DEBUG: cuckoo1: not ready yet
+2023-07-17 10:07:42,484 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.101)
+2023-07-17 10:07:42,500 [cuckoo.core.guest] DEBUG: Uploading analyzer to guest (id=cuckoo1, ip=192.168.56.101, monitor=latest, size=3884763)
+2023-07-17 10:07:44,061 [cuckoo.core.resultserver] DEBUG: Task #68: live log analysis.log initialized.
+2023-07-17 10:07:49,006 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:07:52,472 [cuckoo.core.resultserver] DEBUG: Task #68: File upload for 'shots/0001.jpg'
+2023-07-17 10:07:52,481 [cuckoo.core.resultserver] DEBUG: Task #68 uploaded file length: 125052
+2023-07-17 10:07:54,027 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:07:54,588 [cuckoo.core.resultserver] DEBUG: Task #68: File upload for 'shots/0002.jpg'
+2023-07-17 10:07:54,599 [cuckoo.core.resultserver] DEBUG: Task #68 uploaded file length: 124811
+2023-07-17 10:07:58,963 [cuckoo.core.resultserver] DEBUG: Task #68: File upload for 'shots/0003.jpg'
+2023-07-17 10:07:58,969 [cuckoo.core.resultserver] DEBUG: Task #68 uploaded file length: 125714
+2023-07-17 10:07:59,062 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:03,776 [cuckoo.core.resultserver] DEBUG: Task #68: File upload for 'shots/0004.jpg'
+2023-07-17 10:08:03,781 [cuckoo.core.resultserver] DEBUG: Task #68 uploaded file length: 119639
+2023-07-17 10:08:04,083 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:05,120 [cuckoo.core.resultserver] DEBUG: Task #68: File upload for 'shots/0005.jpg'
+2023-07-17 10:08:05,124 [cuckoo.core.resultserver] DEBUG: Task #68 uploaded file length: 118929
+2023-07-17 10:08:06,542 [cuckoo.core.resultserver] DEBUG: Task #68: File upload for 'shots/0006.jpg'
+2023-07-17 10:08:06,545 [cuckoo.core.resultserver] DEBUG: Task #68 uploaded file length: 118902
+2023-07-17 10:08:09,102 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:14,124 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:19,199 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:24,219 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:29,239 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:34,259 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:39,279 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:44,299 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:49,318 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #68 still processing
+2023-07-17 10:08:49,935 [cuckoo.core.resultserver] DEBUG: Task #68: File upload for 'shots/0007.jpg'
+2023-07-17 10:08:49,941 [cuckoo.core.resultserver] DEBUG: Task #68 uploaded file length: 125796
+2023-07-17 10:08:50,985 [cuckoo.core.resultserver] DEBUG: Task #68: File upload for 'shots/0008.jpg'
+2023-07-17 10:08:50,990 [cuckoo.core.resultserver] DEBUG: Task #68 uploaded file length: 125181
+2023-07-17 10:08:51,327 [cuckoo.core.guest] INFO: cuckoo1: analysis completed successfully
+2023-07-17 10:08:51,332 [cuckoo.core.plugins] DEBUG: Stopped auxiliary module: Replay
+2023-07-17 10:08:51,394 [cuckoo.core.plugins] DEBUG: Stopped auxiliary module: Sniffer
+2023-07-17 10:08:51,394 [cuckoo.machinery.virtualbox] DEBUG: Stopping vm cuckoo1
+2023-07-17 10:08:52,526 [cuckoo.core.resultserver] DEBUG: Stopped tracking machine 192.168.56.101 for task #68
+2023-07-17 10:08:52,526 [cuckoo.core.resultserver] DEBUG: Cancel <Context for LOG> for task 68
+2023-07-17 10:08:52,530 [cuckoo.core.scheduler] DEBUG: Released database task #68
+2023-07-17 10:08:52,540 [cuckoo.core.plugins] DEBUG: Executed processing module "AnalysisInfo" for task #68
+2023-07-17 10:08:52,540 [cuckoo.processing.behavior] WARNING: Analysis results folder does not contain any behavior log files.
+2023-07-17 10:08:52,540 [cuckoo.core.plugins] DEBUG: Executed processing module "BehaviorAnalysis" for task #68
+2023-07-17 10:08:52,540 [cuckoo.core.plugins] DEBUG: Executed processing module "Dropped" for task #68
+2023-07-17 10:08:52,540 [cuckoo.core.plugins] DEBUG: Executed processing module "DroppedBuffer" for task #68
+2023-07-17 10:08:52,541 [cuckoo.core.plugins] DEBUG: Executed processing module "MetaInfo" for task #68
+2023-07-17 10:08:52,541 [cuckoo.core.plugins] DEBUG: Executed processing module "ProcessMemory" for task #68
+2023-07-17 10:08:52,541 [cuckoo.core.plugins] DEBUG: Executed processing module "Procmon" for task #68
+2023-07-17 10:08:52,671 [cuckoo.core.plugins] DEBUG: Executed processing module "Screenshots" for task #68
+2023-07-17 10:08:52,893 [cuckoo.processing.static] CRITICAL: You do not have the m2crypto library installed preventing certificate extraction. Please read the Cuckoo documentation on installing m2crypto (you need SWIG installed and then `pip install m2crypto==0.24.0`)!
+2023-07-17 10:08:53,547 [cuckoo.core.plugins] DEBUG: Executed processing module "Static" for task #68
+2023-07-17 10:08:54,136 [cuckoo.core.plugins] DEBUG: Executed processing module "Strings" for task #68
+2023-07-17 10:08:55,886 [cuckoo.core.plugins] DEBUG: Executed processing module "TargetInfo" for task #68
+2023-07-17 10:08:55,897 [cuckoo.core.plugins] DEBUG: Executed processing module "NetworkAnalysis" for task #68
+2023-07-17 10:08:55,897 [cuckoo.core.plugins] DEBUG: Executed processing module "Extracted" for task #68
+2023-07-17 10:08:55,897 [cuckoo.core.plugins] DEBUG: Executed processing module "TLSMasterSecrets" for task #68
+2023-07-17 10:08:55,898 [cuckoo.core.plugins] DEBUG: Executed processing module "Debug" for task #68
+2023-07-17 10:08:55,906 [cuckoo.core.plugins] DEBUG: Running 542 signatures
+2023-07-17 10:08:55,960 [cuckoo.core.plugins] DEBUG: Analysis matched signature: has_pdb
+2023-07-17 10:08:55,961 [cuckoo.core.plugins] DEBUG: Analysis matched signature: packer_entropy
+2023-07-17 10:08:55,964 [cuckoo.core.plugins] DEBUG: Executed reporting module "JsonDump"
+2023-07-17 10:08:57,383 [cuckoo.core.plugins] DEBUG: Executed reporting module "MongoDB"
+2023-07-17 10:08:57,383 [cuckoo.core.scheduler] INFO: Task #68: reports generation completed
+2023-07-17 10:08:57,386 [cuckoo.core.scheduler] INFO: Task #68: analysis procedure completed
