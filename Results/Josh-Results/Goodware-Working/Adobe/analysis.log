@@ -1,0 +1,17 @@
+2023-07-17 09:30:58,046 [analyzer] DEBUG: Starting analyzer from: C:\tmpbhv_ec
+2023-07-17 09:30:58,046 [analyzer] DEBUG: Pipe server name: \??\PIPE\fAGQNnfvyDmSdoSQMRwlCO
+2023-07-17 09:30:58,046 [analyzer] DEBUG: Log pipe server name: \??\PIPE\laYSDfoUVHmCOtPhDfxjSzGTJJ
+2023-07-17 09:30:58,187 [analyzer] DEBUG: Started auxiliary module DbgView
+2023-07-17 09:30:58,703 [analyzer] DEBUG: Started auxiliary module Disguise
+2023-07-17 06:31:16,851 [analyzer] DEBUG: Started auxiliary module DumpTLSMasterSecrets
+2023-07-17 06:31:16,944 [analyzer] DEBUG: Started auxiliary module Human
+2023-07-17 06:31:16,944 [analyzer] DEBUG: Started auxiliary module InstallCertificate
+2023-07-17 06:31:16,944 [analyzer] DEBUG: Started auxiliary module Reboot
+2023-07-17 06:31:17,053 [analyzer] DEBUG: Started auxiliary module RecentFiles
+2023-07-17 06:31:17,101 [analyzer] DEBUG: Started auxiliary module Screenshots
+2023-07-17 06:31:17,101 [analyzer] DEBUG: Started auxiliary module LoadZer0m0n
+2023-07-17 06:31:26,194 [lib.api.process] INFO: Successfully executed process from path u'C:\\Users\\cukoo1\\AppData\\Local\\Temp\\AcroRdrDC2300320244_en_US.exe' with arguments '' and pid 2640
+2023-07-17 06:33:04,944 [modules.auxiliary.human] INFO: Found button u'&Install', clicking it
+2023-07-17 06:33:36,881 [analyzer] INFO: Analysis timeout hit, terminating analysis.
+2023-07-17 06:33:59,569 [lib.api.process] INFO: Memory dump of process with pid 2640 completed
+2023-07-17 06:33:59,617 [analyzer] INFO: Analysis completed.
